@@ -1,0 +1,65 @@
+# Pension Fund Performance Analytics Platform - Environment Variables
+# Copy this file to .env and update the values as needed
+
+# Database Configuration
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=pension_fund_analytics
+DB_USER=postgres
+DB_PASSWORD=your_password_here
+DB_POOL_SIZE=10
+DB_MAX_OVERFLOW=20
+
+# API Configuration
+API_HOST=0.0.0.0
+API_PORT=8000
+API_DEBUG=False
+SECRET_KEY=your-secret-key-change-in-production
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+RATE_LIMIT_PER_MINUTE=100
+
+# Analytics Configuration
+RISK_FREE_RATE=0.02
+MARKET_RETURN=0.08
+ANOMALY_CONTAMINATION=0.1
+ANOMALY_RANDOM_STATE=42
+ROLLING_WINDOW_DAYS=252
+SHARPE_RATIO_RISK_FREE_RATE=0.02
+MAX_ALLOCATION_PER_ASSET=0.25
+MIN_ALLOCATION_PER_ASSET=0.05
+
+# ETL Configuration
+DATA_SOURCE_URL=
+DATA_REFRESH_INTERVAL_HOURS=24
+BATCH_SIZE=1000
+DATA_DIRECTORY=data
+PROCESSED_DATA_PATH=data/processed
+RAW_DATA_PATH=data/raw
+
+# Dashboard Configuration
+DASHBOARD_REFRESH_INTERVAL=300
+MAX_DATA_POINTS=1000
+POWERBI_WORKSPACE_ID=
+POWERBI_CLIENT_ID=
+POWERBI_CLIENT_SECRET=
+
+# Logging Configuration
+LOG_LEVEL=INFO
+LOG_FILE_PATH=logs/app.log
+LOG_MAX_FILE_SIZE_MB=10
+LOG_BACKUP_COUNT=5
+
+# External API Keys (if needed)
+YAHOO_FINANCE_API_KEY=
+ALPHA_VANTAGE_API_KEY=
+QUANDL_API_KEY=
+
+# Security Settings
+CORS_ORIGINS=*
+ENABLE_RATE_LIMITING=True
+ENABLE_AUTHENTICATION=True
+
+# Development Settings
+DEBUG=False
+TESTING=False
+ENVIRONMENT=development 
